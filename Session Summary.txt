@@ -1,0 +1,260 @@
+HTML CSS - Mark up Language 
+HTML 
+    Provides the basic structure of the web pages with different content 
+        Forms 
+        Tables 
+        Tags - anchor heading tags 
+        Images 
+
+CSS 
+    We are able to control & Style the web pagees      
+
+JS - Prg Language 
+    1. JS is for making script for application or web pages to make them more active 
+    2. more interactive web pages 
+
+    3. interactivity: 
+        JS allow to developers to create more interactive web pages. Extra elements can be added 
+            Examples: Drop Down Menu, Modal Window, Sliders 
+
+    4. Dynamic content: Without a page reload JS enable dynamic content
+            Instagram, Facebook. User I am scrolling on these application. 
+    
+    5. Behavior: JS can manipulate the HTML, CSS to modify the DOM ( Document Object Model )
+            Allow changes to the structure & style to the web pages 
+
+
+Reasons why we integrate the JS with HTML & CSS Project 
+    1. Enhanced user Experience 
+    2. Improved Functionalities 
+    3. Event handling 
+    4. Cross-Platform Compatibility
+
+Data Types in JS 
+
+var num1 = 5; 
+var num2 = 6; 
+
+console.log(num1*num2); // Output = 30
+
+// variables are the name for the memory locations which will hold or save the data or values 
+// values are divided into different types 
+    1. number 
+        it is a numberical values 0 to 9 
+
+        two sub types 
+            integer: number without decimal point 
+                    100, 500, 534
+
+            float: number with decimal point 
+                    100.12, 
+
+    2. Boolean 
+        data type which can have only 2 values: 
+            1. True 
+            2. False 
+        Used in conditional statements 
+            if ( condition is true )
+                    code is executed
+            else when the condition is false  
+                    code is executed 
+
+        var x = 5; 
+        if ( x > 0 )
+            console.log( 'X is a positive number' );
+
+        else 
+            console.log( 'x is a negative number' );
+
+    3. String 
+        sequence of characters. 
+        enclosed with quotes ' ' or " ". 
+        2 different string we can concatinate them + 
+
+
+
+Arrays in JS 
+    Data Structure. 
+
+    Collection of homogeneous data types. Arrays are 0 indexed 
+    
+    const numArray = [ 1, 2, 3, 4, 5 ]; 
+
+    const charArray = [ 'a', 'b', 'c', 'd', 'e' ];
+
+arrays starts with 0 index 
+first index = 0 
+last index = length of the array - 1 
+
+length of the array = total number of elements 
+
+const numArray = [ 1, 2, 3, 4, 5 ]; 
+
+length of the numArray = 5 // numArray is having 5 elements 
+first index = 0 
+last index = 5 - 1 = 4 
+
+indexes for numArray will be 0, 1, 2, 3, 4
+
+index 0 will represent the value 1
+index 1 will represent the value 2
+index 2 will represent the value 3
+index 3 will represent the value 4
+index 4 will represent the value 5
+
+
+Operatos in JS 
+    1. Arithmetic Operator 
+        + 
+        - 
+        * 
+        /
+        % modulus       7 % 3  remider = 1 
+        ++ 
+        -- 
+    
+    2. Relational Operator
+        < less than
+        > greater that 
+        <= less than or equal to 
+        >= greater than or equal to 
+        == equal to 
+        != not equal to 
+
+    3. Logical Operator 
+        && AND      Both the conditions should be true 
+        || OR       Any one condition should be true 
+        ! NOT       change the true into false. false will be change to true 
+
+    var num1 = 10; 
+    var num2 = 15; 
+    var num3 = 20; 
+
+    find the largest element 
+        if( num1 > num2  && num1 > num3 )               // if ( 10 > 15 && 10 > 20   )
+            console.log( 'num 1 is biggest value' );            condition is failed 
+
+        else if( num2 > num1 && num2 > num3 )           // else if ( 15 > 10 && 15 > 20 )   true && false 
+            console.log( 'num 2 is biggest value' );        condition is failed
+
+        else                                            // else   20 > 10 && 20 > 15 
+            console.log( 'num 3 is biggest value' );            condition is true 
+
+
+    var demo = false; 
+
+    !demo; 
+
+    console.log(demo);   // true 
+
+
+    XOR - LOGICAL XOR   not 
+          BITWISE XOR   have  
+    ^
+
+Branching in JS 
+    1. If else 
+
+    2. switch cases 
+        let color = "green";
+
+        switch( color )
+        {
+            case "red":
+                console.log( " The Color is red " ); 
+            break; 
+
+            case "green":
+                console.log( " The color is green " );
+            break; 
+
+            default: 
+                console.log(" The color is neither red or green ");
+        }
+
+Looping in JS 
+    1. For Loop 
+            const numArray = [ 1, 2, 3, 4, 5 ]; 
+            
+            for ( let i = 0 ; i< numArray.length ; i++ ) {
+                console.log( numArray[i]  );    
+            }
+
+            Output 
+                // at i = 0 output = 1 
+                // at i = 1 output = 2 
+                // at i = 2 output = 3
+                // at i = 3 output = 4
+                // at i = 4 output = 5
+                // at i = 5 condition is failed so the loop will stop its execution 
+
+
+    2. For Each loop 
+            const numArray = [ 1, 2, 3, 4, 5 ]; 
+            var sum = 0; 
+
+            numArray.forEach( myFunction );
+
+            function myFunction( elements ){
+                sum = sum + elements;
+            }
+            console.log(sum);
+
+            /*
+                sum = 0 
+                sum = 0 + 1 = 1 
+                sum = 1 + 2 = 3 
+                sum = 3 + 3 = 6 
+                sum = 6 + 4 = 10 
+                sum = 10 + 5 = 15 
+                sum = 15 + end of the array. So, the execution will stop 
+            */
+            output will be 15 
+
+    3. While Loop 
+            while( condition ) { 
+                // code 
+            }
+
+            let i = 0; 
+            var sum = 0; 
+
+            while ( i<5 ){
+                sum = sum + i ; 
+                i = i + 1 
+            }
+
+            console.log(sum);
+ 
+ // at i = 0 sum = 0 + 0 = 0 i = 1 
+ // at i = 1 sum = 0 + 1 = 1 i = 2 
+ // at i = 2 sum = 1 + 2 = 3 i = 3 
+ // at i = 3 sum = 3 + 3 = 6 i = 4 
+ // at i = 4 sum = 6 + 4 = 10 i = 5 
+ // at i = 5 condition is failed execution will stop 
+
+ output = 10 
+
+while loop can execute for zero times  
+
+
+    4. Do While Loop 
+        do { 
+            
+            // code 
+
+        } while ( condition ); 
+
+minimum number of execution = 1 
+
+        var i = 11;
+        var sum = 15; 
+
+        do { 
+                console.log( i + sum );
+                i = i + 1; 
+        } while( i < 5 ); 
+
+output 25 
+
+Functions in JS 
